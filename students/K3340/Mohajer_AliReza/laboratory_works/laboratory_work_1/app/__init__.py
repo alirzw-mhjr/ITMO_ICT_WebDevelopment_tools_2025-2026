@@ -1,0 +1,1 @@
+# Bookcrossing FastAPI application package.
