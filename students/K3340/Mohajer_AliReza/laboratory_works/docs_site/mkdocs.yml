@@ -13,9 +13,9 @@ theme:
   name: material
   language: ru
   palette:
-    - scheme: default
-      primary: blue
-      accent: light blue
+    - scheme: slate
+      primary: indigo
+      accent: indigo
 
 markdown_extensions:
   - tables
