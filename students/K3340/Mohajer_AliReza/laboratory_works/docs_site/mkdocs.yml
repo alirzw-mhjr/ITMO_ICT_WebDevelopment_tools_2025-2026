@@ -1,5 +1,9 @@
 site_name: Documentation - Alireza Mohajer
+site_url: https://alirzw-mhjr.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/
+repo_url: https://github.com/alirzw-mhjr/ITMO_ICT_WebDevelopment_tools_2025-2026
+repo_name: GitHub Repository
 docs_dir: docs
+
 nav:
   - Главная: index.md
   - Лабораторные работы:
@@ -12,3 +16,9 @@ theme:
     - scheme: default
       primary: blue
       accent: light blue
+
+markdown_extensions:
+  - tables
+  - admonition
+  - pymdownx.highlight
+  - pymdownx.superfences
