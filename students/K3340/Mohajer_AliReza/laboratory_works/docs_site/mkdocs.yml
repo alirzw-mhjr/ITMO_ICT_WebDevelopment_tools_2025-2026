@@ -1,0 +1,14 @@
+site_name: Documentation - Alireza Mohajer
+docs_dir: docs
+nav:
+  - Главная: index.md
+  - Лабораторные работы:
+      - Лабораторная работа 1: laboratory_works/laboratory_work_1.md
+
+theme:
+  name: material
+  language: ru
+  palette:
+    - scheme: default
+      primary: blue
+      accent: light blue
