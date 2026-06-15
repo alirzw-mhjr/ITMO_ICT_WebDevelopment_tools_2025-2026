@@ -7,6 +7,7 @@
 **FastAPI приложения для буккроссинга**
 
 - [Лабораторная работа 1 - приложение буккроссинга](laboratory_works/laboratory_work_1.md)
+- [Лабораторная работа 2 - потоки, процессы, асинхронность](laboratory_works/laboratory_work_2.md)
 
 ---
 

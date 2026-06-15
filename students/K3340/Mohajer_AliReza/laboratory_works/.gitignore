@@ -1,0 +1,8 @@
+# Сборка mkdocs
+docs_site/site/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
