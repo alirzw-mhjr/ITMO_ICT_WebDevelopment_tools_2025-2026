@@ -1,0 +1,82 @@
+# Оркестрация сервисов лабораторной работы 3.
+#
+#   redis   — брокер сообщений и хранилище результатов для Celery
+#   parser  — сервис-парсер (вызывается по HTTP), пишет в БД
+#   web     — основное FastAPI-приложение (API)
+#   worker  — Celery worker (выполняет фоновые задачи)
+#   beat    — Celery beat (запускает периодические задачи по расписанию)
+#
+# База данных — это файл SQLite из лабораторной работы 1
+# (../laboratory_work_1/app.db). Папка лаб 1 монтируется в каждый сервис как
+# /lab1, поэтому все контейнеры работают с одной и той же базой.
+
+services:
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 5s
+      retries: 10
+
+  parser:
+    build:
+      context: .
+      dockerfile: parser/Dockerfile
+    environment:
+      DATABASE_URL: sqlite:////lab1/app.db
+    volumes:
+      - ../laboratory_work_1:/lab1
+    ports:
+      - "8001:8001"
+
+  web:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+    environment:
+      DATABASE_URL: sqlite:////lab1/app.db
+      REDIS_URL: redis://redis:6379/0
+      PARSER_URL: http://parser:8001
+    volumes:
+      - ../laboratory_work_1:/lab1
+    depends_on:
+      redis:
+        condition: service_healthy
+      parser:
+        condition: service_started
+    ports:
+      - "8005:8000"
+
+  worker:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+    command: celery -A web.app.celery_app.celery_app worker --loglevel=info
+    environment:
+      DATABASE_URL: sqlite:////lab1/app.db
+      REDIS_URL: redis://redis:6379/0
+      PARSER_URL: http://parser:8001
+    volumes:
+      - ../laboratory_work_1:/lab1
+    depends_on:
+      redis:
+        condition: service_healthy
+      parser:
+        condition: service_started
+
+  beat:
+    build:
+      context: .
+      dockerfile: web/Dockerfile
+    command: celery -A web.app.celery_app.celery_app beat --loglevel=info
+    environment:
+      DATABASE_URL: sqlite:////lab1/app.db
+      REDIS_URL: redis://redis:6379/0
+    volumes:
+      - ../laboratory_work_1:/lab1
+    depends_on:
+      redis:
+        condition: service_healthy

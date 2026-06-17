@@ -1,16 +1,4 @@
-"""Задача 2. Параллельный парсинг веб-страниц с помощью multiprocessing.
-
-Список URL делится на равные части, каждую часть обрабатывает отдельный процесс.
-У каждого процесса свой интерпретатор Python и своё сетевое соединение, поэтому
-запросы выполняются по-настоящему параллельно. Для I/O-bound задачи такой подход
-тоже ускоряет работу, но по сравнению с threading он тяжелее: на запуск процессов
-и передачу данных уходит больше ресурсов. Каждый процесс открывает собственную
-сессию к SQLite, а timeout в db.py защищает от ошибки "database is locked" при
-одновременной записи.
-"""
-
-from __future__ import annotations
-
+# Задача 2. Параллельный парсинг веб-страниц с помощью multiprocessing.
 import multiprocessing
 import time
 
@@ -23,7 +11,7 @@ PROCESSES = 4
 
 
 def parse_and_save(url: str) -> None:
-    """Загружает страницу по URL, парсит заголовок и сохраняет его в БД."""
+    # Загружает страницу по URL, парсит заголовок и сохраняет его в БД
     try:
         response = requests.get(url, headers=HEADERS, timeout=30)
         response.raise_for_status()
@@ -36,13 +24,13 @@ def parse_and_save(url: str) -> None:
 
 
 def worker(urls: list[str]) -> None:
-    """Обрабатывает свою часть списка URL последовательно (в отдельном процессе)."""
+    # Обрабатывает свою часть списка URL последовательно (в отдельном процессе
     for url in urls:
         parse_and_save(url)
 
 
 def run(workers: int = PROCESSES) -> float:
-    """Запускает парсинг в `workers` процессах. Возвращает время выполнения."""
+    # Запускает парсинг в `workers` процессах. Возвращает время выполнения
     init_db()
     urls = load_urls()
 
@@ -60,8 +48,6 @@ def run(workers: int = PROCESSES) -> float:
 
 
 if __name__ == "__main__":
-    # Защита __main__ обязательна: на Windows процессы запускаются методом spawn,
-    # и модуль повторно импортируется в каждом дочернем процессе.
     elapsed = run()
     print(f"[multiprocessing] процессов: {PROCESSES}")
     print(f"[multiprocessing] время выполнения: {elapsed:.4f} c")

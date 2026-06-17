@@ -1,15 +1,4 @@
-"""Задача 2. Параллельный парсинг веб-страниц с помощью threading.
-
-Список URL делится на равные части по числу потоков, каждый поток
-последовательно обрабатывает свою часть: загружает страницу, парсит заголовок
-и сохраняет его в базу данных. Парсинг — это I/O-bound задача (основное время
-тратится на ожидание ответа сети), а на таких задачах GIL отпускается во время
-ожидания, поэтому потоки дают реальное ускорение по сравнению с последовательным
-выполнением.
-"""
-
-from __future__ import annotations
-
+# Задача 2. Параллельный парсинг веб-страниц с помощью threading.
 import threading
 import time
 
@@ -22,10 +11,11 @@ THREADS = 4
 
 
 def parse_and_save(url: str) -> None:
-    """Загружает страницу по URL, парсит заголовок и сохраняет его в БД."""
+    # Загружает страницу по URL, парсит заголовок и сохраняет его в БД
     try:
         response = requests.get(url, headers=HEADERS, timeout=30)
         response.raise_for_status()
+        # print(response.text)
         title, author = parse_title(response.text)
         added = save_book(title, author)
         status = "сохранено" if added else "уже есть"
@@ -35,13 +25,13 @@ def parse_and_save(url: str) -> None:
 
 
 def worker(urls: list[str]) -> None:
-    """Обрабатывает свою часть списка URL последовательно."""
+    # Обрабатывает свою часть списка URL последовательно
     for url in urls:
         parse_and_save(url)
 
 
 def run(workers: int = THREADS) -> float:
-    """Запускает парсинг в `workers` потоках. Возвращает время выполнения."""
+    # Запускает парсинг в `workers` потоках. Возвращает время выполнения
     init_db()
     urls = load_urls()
 

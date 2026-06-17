@@ -1,18 +1,8 @@
-"""Вспомогательные функции для задачи 2: загрузка списка URL и парсинг HTML.
-
-Логика разбора страницы вынесена сюда, чтобы все три варианта парсера
-(threading, multiprocessing, async) извлекали заголовок книги одинаково.
-"""
-
-from __future__ import annotations
-
+# загрузка списка URL и парсинг HTML.
 from pathlib import Path
 
 from bs4 import BeautifulSoup
 
-# Сколько URL из book_urls.txt реально обрабатывать. В файле ~950 ссылок;
-# для замеров и сравнения подходов берём первые URL_LIMIT штук, чтобы прогон
-# занимал разумное время и не создавал лишнюю нагрузку на gutenberg.org.
 URL_LIMIT = 30
 
 URLS_FILE = Path(__file__).resolve().parent / "book_urls.txt"
@@ -27,7 +17,6 @@ HEADERS = {
 
 
 def load_urls(limit: int = URL_LIMIT) -> list[str]:
-    """Читает book_urls.txt и возвращает первые `limit` непустых ссылок."""
     urls: list[str] = []
     for line in URLS_FILE.read_text(encoding="utf-8").splitlines():
         line = line.strip()
@@ -37,12 +26,7 @@ def load_urls(limit: int = URL_LIMIT) -> list[str]:
 
 
 def parse_title(html: str) -> tuple[str, str | None]:
-    """Извлекает (заголовок, автор) из HTML-страницы книги Gutenberg.
 
-    У страниц вида https://www.gutenberg.org/ebooks/<id> заголовок лежит в
-    <h1>, а тег <title> имеет формат "Название | Project Gutenberg".
-    Автора берём из строки вида "Название by Автор", если она есть.
-    """
     soup = BeautifulSoup(html, "html.parser")
 
     h1 = soup.find("h1")
