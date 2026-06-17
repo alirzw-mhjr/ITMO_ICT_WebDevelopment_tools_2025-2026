@@ -1,0 +1,3123 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://alirzw-mhjr.github.io/ITMO_ICT_WebDevelopment_tools_2025-2026/laboratory_works/laboratory_work_1/">
+      
+      
+        <link rel="prev" href="../..">
+      
+      
+        <link rel="next" href="../laboratory_work_2/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Лабораторная работа 1 - Documentation - Alireza Mohajer</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Documentation - Alireza Mohajer" class="md-header__button md-logo" aria-label="Documentation - Alireza Mohajer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Documentation - Alireza Mohajer
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Лабораторная работа 1
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/alirzw-mhjr/ITMO_ICT_WebDevelopment_tools_2025-2026" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repository
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Documentation - Alireza Mohajer" class="md-nav__button md-logo" aria-label="Documentation - Alireza Mohajer" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Documentation - Alireza Mohajer
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/alirzw-mhjr/ITMO_ICT_WebDevelopment_tools_2025-2026" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub Repository
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Главная
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторные работы
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Лабораторные работы
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 1
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 1
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Тема
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Цель работы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Выбранная тема
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Архитектура и модель данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Архитектура и модель данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таблицы базы данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Таблицы базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Таблица Users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-books" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Таблица Books
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-userbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Таблица UserBooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-genres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Таблица Genres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-bookgenres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Таблица BookGenres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-exchanges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Таблица Exchanges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Таблица Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Диаграмма связей
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Выполненные практические работы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Выполненные практические работы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практическая работа 1.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практическая работа 1.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практическая работа 1.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Реализованные API эндпоинты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Реализованные API эндпоинты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apiv1auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аутентификация (/api/v1/auth/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Аутентификация (/api/v1/auth/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вход в систему
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить информацию о текущем пользователе
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Изменить пароль
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пользователи (/api/v1/users/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Пользователи (/api/v1/users/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить список пользователей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить детальную информацию о пользователе
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обновить свой профиль
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1genres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Жанры (/api/v1/genres/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Жанры (/api/v1/genres/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить все жанры
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Создать новый жанр
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1books" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Книги (/api/v1/books/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Книги (/api/v1/books/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить все книги
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить книгу по ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Создать новую книгу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обновить книгу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Удалить книгу
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1user-books" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Библиотека пользователя (/api/v1/user-books/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Библиотека пользователя (/api/v1/user-books/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить все книги пользователя
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Добавить книгу в библиотеку
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить книгу из библиотеки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обновить статус книги
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Удалить книгу из библиотеки
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1exchanges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обмены (/api/v1/exchanges/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Обмены (/api/v1/exchanges/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить все обмены пользователя
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Создать запрос на обмен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить детали обмена
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Принять запрос на обмен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отклонить запрос на обмен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завершить обмен
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сообщения (/api/v1/messages/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Сообщения (/api/v1/messages/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить сообщения для обмена
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отправить сообщение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отметить сообщение как прочитанное
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Логика предметной области
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Логика предметной области">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Жизненный цикл обмена книгами
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Состояние книги в библиотеке
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Условие книги
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pydantic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pydantic схемы (примеры)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pydantic схемы (примеры)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usercreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UserCreate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#userout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UserOut
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookcreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BookCreate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#userbookcreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UserBookCreate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exchangecreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExchangeCreate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры использования API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Примеры использования API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация и вход
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Работа с книгами
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обмен книгами
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вывод
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../laboratory_work_2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../laboratory_work_3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лабораторная работа 3
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Тема
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Цель работы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Выбранная тема
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Архитектура и модель данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Архитектура и модель данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Таблицы базы данных
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Таблицы базы данных">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Таблица Users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-books" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Таблица Books
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-userbooks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Таблица UserBooks
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-genres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Таблица Genres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-bookgenres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Таблица BookGenres
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-exchanges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Таблица Exchanges
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7-messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. Таблица Messages
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Диаграмма связей
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Выполненные практические работы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Выполненные практические работы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практическая работа 1.1
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практическая работа 1.2
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Практическая работа 1.3
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Реализованные API эндпоинты
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Реализованные API эндпоинты">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#apiv1auth" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Аутентификация (/api/v1/auth/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Аутентификация (/api/v1/auth/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вход в систему
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить информацию о текущем пользователе
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Изменить пароль
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пользователи (/api/v1/users/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Пользователи (/api/v1/users/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить список пользователей
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить детальную информацию о пользователе
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обновить свой профиль
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1genres" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Жанры (/api/v1/genres/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Жанры (/api/v1/genres/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить все жанры
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Создать новый жанр
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1books" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Книги (/api/v1/books/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Книги (/api/v1/books/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить все книги
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#id" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить книгу по ID
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Создать новую книгу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обновить книгу
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Удалить книгу
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1user-books" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Библиотека пользователя (/api/v1/user-books/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Библиотека пользователя (/api/v1/user-books/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить все книги пользователя
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Добавить книгу в библиотеку
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить книгу из библиотеки
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обновить статус книги
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Удалить книгу из библиотеки
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1exchanges" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обмены (/api/v1/exchanges/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Обмены (/api/v1/exchanges/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить все обмены пользователя
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_27" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Создать запрос на обмен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_28" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить детали обмена
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_29" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Принять запрос на обмен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_30" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отклонить запрос на обмен
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_31" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Завершить обмен
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apiv1messages" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Сообщения (/api/v1/messages/)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Сообщения (/api/v1/messages/)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_32" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Получить сообщения для обмена
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_33" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отправить сообщение
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_34" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Отметить сообщение как прочитанное
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_35" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Логика предметной области
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Логика предметной области">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_36" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Жизненный цикл обмена книгами
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_37" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Состояние книги в библиотеке
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_38" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Условие книги
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pydantic" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pydantic схемы (примеры)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pydantic схемы (примеры)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usercreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UserCreate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#userout" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UserOut
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#bookcreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        BookCreate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#userbookcreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        UserBookCreate
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exchangecreate" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ExchangeCreate
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Примеры использования API
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Примеры использования API">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_39" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Регистрация и вход
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_40" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Работа с книгами
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_41" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Обмен книгами
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_42" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Вывод
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="1">Лабораторная работа 1</h1>
+<p>Выполнены:</p>
+<ul>
+<li>практическая работа 1.1 — базовое FastAPI-приложение с временными данными;</li>
+<li>практическая работа 1.2 — перенос приложения на SQLAlchemy и Pydantic, реализация таблиц и связей;</li>
+<li>практическая работа 1.3 — настройка Alembic и миграций базы данных.</li>
+<li>модели данных в соответствии с предметной областью;</li>
+<li>авторизация и JWT;</li>
+</ul>
+<hr />
+<h2 id="_1">Тема</h2>
+<p>Реализация серверного приложения FastAPI по предметной области буккроссинга.</p>
+<h2 id="_2">Цель работы</h2>
+<p>Разработать серверное приложение на FastAPI с использованием SQLAlchemy, Pydantic, Alembic и механизмов аутентификации, реализующее предметную область сервиса для обмена книгами между пользователями.</p>
+<h2 id="_3">Выбранная тема</h2>
+<p>Разработка веб-приложения для буккроссинга.</p>
+<p>Приложение позволяет пользователям:</p>
+<ul>
+<li><strong>регистрироваться и входить</strong> в систему с использованием JWT;</li>
+<li><strong>создавать и редактировать профиль</strong> с дополнительной информацией (локация, биография, предпочтения);</li>
+<li><strong>добавлять книги</strong> в личную библиотеку с указанием состояния (новая, хорошее, приемлемое, плохое);</li>
+<li><strong>отправлять и принимать запросы</strong> на обмен книгами;</li>
+<li><strong>отправлять сообщения</strong> в рамках конкретного обмена;</li>
+<li><strong>управлять статусами обменов</strong> (ожидание, принято, отклонено, завершено, отменено);</li>
+<li><strong>просматривать историю</strong> своих обменов и статистику.</li>
+</ul>
+<hr />
+<h2 id="_4">Архитектура и модель данных</h2>
+<h3 id="_5">Таблицы базы данных</h3>
+<p>Приложение использует следующую структуру БД:</p>
+<h4 id="1-users">1. Таблица <code>Users</code></h4>
+<p>Основная информация о пользователях системы.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>INTEGER</td>
+<td>Уникальный идентификатор (PK)</td>
+</tr>
+<tr>
+<td>username</td>
+<td>VARCHAR(50)</td>
+<td>Уникальное имя пользователя</td>
+</tr>
+<tr>
+<td>display_name</td>
+<td>VARCHAR(100)</td>
+<td>Отображаемое имя (опционально)</td>
+</tr>
+<tr>
+<td>email</td>
+<td>VARCHAR(255)</td>
+<td>Уникальный email</td>
+</tr>
+<tr>
+<td>password_hash</td>
+<td>VARCHAR(255)</td>
+<td>Хеш пароля</td>
+</tr>
+<tr>
+<td>location</td>
+<td>VARCHAR(100)</td>
+<td>Локация пользователя (опционально)</td>
+</tr>
+<tr>
+<td>preferences</td>
+<td>TEXT</td>
+<td>Предпочтения по книгам (опционально)</td>
+</tr>
+<tr>
+<td>bio</td>
+<td>TEXT</td>
+<td>Биография (опционально)</td>
+</tr>
+<tr>
+<td>created_at</td>
+<td>TIMESTAMP</td>
+<td>Дата регистрации</td>
+</tr>
+<tr>
+<td>total_swaps</td>
+<td>INTEGER</td>
+<td>Количество завершенных обменов</td>
+</tr>
+<tr>
+<td>is_active</td>
+<td>BOOLEAN</td>
+<td>Статус активности пользователя</td>
+</tr>
+</tbody>
+</table>
+<h4 id="2-books">2. Таблица <code>Books</code></h4>
+<p>Каталог всех книг в системе.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>INTEGER</td>
+<td>Уникальный идентификатор (PK)</td>
+</tr>
+<tr>
+<td>title</td>
+<td>VARCHAR(255)</td>
+<td>Название книги</td>
+</tr>
+<tr>
+<td>authors</td>
+<td>TEXT</td>
+<td>Авторы книги</td>
+</tr>
+<tr>
+<td>ISBN</td>
+<td>VARCHAR(20)</td>
+<td>ISBN (опционально, уникальный)</td>
+</tr>
+<tr>
+<td>description</td>
+<td>TEXT</td>
+<td>Описание книги</td>
+</tr>
+<tr>
+<td>published_year</td>
+<td>INTEGER</td>
+<td>Год публикации</td>
+</tr>
+<tr>
+<td>page_count</td>
+<td>INTEGER</td>
+<td>Количество страниц</td>
+</tr>
+</tbody>
+</table>
+<h4 id="3-userbooks">3. Таблица <code>UserBooks</code></h4>
+<p>Связь пользователя с его книгами (что и в каком состоянии есть у каждого пользователя).</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>INTEGER</td>
+<td>Уникальный идентификатор (PK)</td>
+</tr>
+<tr>
+<td>user_id</td>
+<td>INTEGER</td>
+<td>ID пользователя (FK)</td>
+</tr>
+<tr>
+<td>book_id</td>
+<td>INTEGER</td>
+<td>ID книги (FK)</td>
+</tr>
+<tr>
+<td>condition</td>
+<td>VARCHAR(50)</td>
+<td>Состояние: new, good, acceptable, poor</td>
+</tr>
+<tr>
+<td>status</td>
+<td>VARCHAR(50)</td>
+<td>Статус: available, swapped, unavailable</td>
+</tr>
+<tr>
+<td>added_at</td>
+<td>TIMESTAMP</td>
+<td>Дата добавления в библиотеку</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ограничения:</strong></p>
+<ul>
+<li>UNIQUE(user_id, book_id) — пользователь не может иметь дублирующиеся копии одной книги</li>
+</ul>
+<h4 id="4-genres">4. Таблица <code>Genres</code></h4>
+<p>Жанры/категории книг.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>INTEGER</td>
+<td>Уникальный идентификатор (PK)</td>
+</tr>
+<tr>
+<td>name</td>
+<td>VARCHAR(100)</td>
+<td>Название жанра (уникальное)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="5-bookgenres">5. Таблица <code>BookGenres</code></h4>
+<p>Связь many-to-many между книгами и жанрами.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>INTEGER</td>
+<td>Уникальный идентификатор (PK)</td>
+</tr>
+<tr>
+<td>book_id</td>
+<td>INTEGER</td>
+<td>ID книги (FK)</td>
+</tr>
+<tr>
+<td>genre_id</td>
+<td>INTEGER</td>
+<td>ID жанра (FK)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Ограничения:</strong></p>
+<ul>
+<li>UNIQUE(book_id, genre_id) — книга не может иметь один жанр дважды</li>
+</ul>
+<h4 id="6-exchanges">6. Таблица <code>Exchanges</code></h4>
+<p>Запросы на обмен между пользователями.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>INTEGER</td>
+<td>Уникальный идентификатор (PK)</td>
+</tr>
+<tr>
+<td>requester_id</td>
+<td>INTEGER</td>
+<td>ID пользователя, который запросил обмен (FK)</td>
+</tr>
+<tr>
+<td>owner_id</td>
+<td>INTEGER</td>
+<td>ID пользователя-владельца запрашиваемой книги (FK)</td>
+</tr>
+<tr>
+<td>requested_userbook_id</td>
+<td>INTEGER</td>
+<td>ID UserBooks книги, которую запрашивает пользователь (FK)</td>
+</tr>
+<tr>
+<td>offered_userbook_id</td>
+<td>INTEGER</td>
+<td>ID UserBooks книги, которую предлагает пользователь (FK)</td>
+</tr>
+<tr>
+<td>message</td>
+<td>TEXT</td>
+<td>Сообщение к запросу (опционально)</td>
+</tr>
+<tr>
+<td>status</td>
+<td>VARCHAR(50)</td>
+<td>Статус: pending, accepted, rejected, completed, cancelled</td>
+</tr>
+<tr>
+<td>requested_at</td>
+<td>TIMESTAMP</td>
+<td>Дата создания запроса</td>
+</tr>
+<tr>
+<td>exchange_at</td>
+<td>TIMESTAMP</td>
+<td>Дата завершения обмена (опционально)</td>
+</tr>
+</tbody>
+</table>
+<h4 id="7-messages">7. Таблица <code>Messages</code></h4>
+<p>Сообщения в рамках конкретного обмена.</p>
+<table>
+<thead>
+<tr>
+<th>Поле</th>
+<th>Тип</th>
+<th>Описание</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>id</td>
+<td>INTEGER</td>
+<td>Уникальный идентификатор (PK)</td>
+</tr>
+<tr>
+<td>exchange_id</td>
+<td>INTEGER</td>
+<td>ID обмена (FK)</td>
+</tr>
+<tr>
+<td>sender_id</td>
+<td>INTEGER</td>
+<td>ID отправителя (FK)</td>
+</tr>
+<tr>
+<td>receiver_id</td>
+<td>INTEGER</td>
+<td>ID получателя (FK)</td>
+</tr>
+<tr>
+<td>message_text</td>
+<td>TEXT</td>
+<td>Текст сообщения</td>
+</tr>
+<tr>
+<td>is_read</td>
+<td>BOOLEAN</td>
+<td>Прочитано ли сообщение</td>
+</tr>
+<tr>
+<td>sent_at</td>
+<td>TIMESTAMP</td>
+<td>Дата отправки</td>
+</tr>
+</tbody>
+</table>
+<h3 id="_6">Диаграмма связей</h3>
+<div class="highlight"><pre><span></span><code>Users
+  ├── 1 ---&gt; * UserBooks
+  ├── 1 ---&gt; * Exchanges (как requester_id)
+  ├── 1 ---&gt; * Exchanges (как owner_id)
+  └── 1 ---&gt; * Messages (как sender_id и receiver_id)
+
+Books
+  ├── 1 ---&gt; * UserBooks
+  ├── 1 ---&gt; * BookGenres
+  └── 1 ---&gt; * Exchanges (через UserBooks)
+
+Genres
+  └── 1 ---&gt; * BookGenres
+
+UserBooks
+  ├── * ---&gt; * Exchanges (requested_userbook_id, offered_userbook_id)
+  └── * ---&gt; * Exchanges
+
+Exchanges
+  └── 1 ---&gt; * Messages
+
+Messages
+  └── * (связь с Users)
+</code></pre></div>
+<hr />
+<h2 id="_7">Выполненные практические работы</h2>
+<h3 id="11">Практическая работа 1.1</h3>
+<p>На первом этапе было создано базовое приложение FastAPI с временными данными.</p>
+<p>Были реализованы:</p>
+<ul>
+<li>endpoint для book;</li>
+<li>endpoint для user;</li>
+<li>базовая работа со Swagger;</li>
+<li>использование Pydantic-моделей для валидации данных.</li>
+</ul>
+<h3 id="12">Практическая работа 1.2</h3>
+<p>На втором этапе приложение было переведено на PostgreSQL и SQLModel.</p>
+<p>Были реализованы таблицы:</p>
+<ul>
+<li><code>User</code> — информация о пользователях;</li>
+<li><code>Book</code> — книги в системе;</li>
+<li><code>UserBook</code> — связь между пользователями и книгами</li>
+<li><code>Genre</code> — жанры книг;</li>
+<li><code>BookGenreLink</code> — связь между книгами и жанрами.</li>
+</ul>
+<h3 id="13">Практическая работа 1.3</h3>
+<p>На третьем этапе была подключена система миграций Alembic.</p>
+<p>Были выполнены:</p>
+<ul>
+<li>инициализация Alembic;</li>
+<li>настройка <code>alembic.ini</code>;</li>
+<li>настройка <code>migrations/env.py</code>;</li>
+<li>создание и применение миграций;</li>
+<li>перевод проекта на управление схемой базы данных через Alembic.</li>
+</ul>
+<hr />
+<h2 id="api">Реализованные API эндпоинты</h2>
+<h3 id="apiv1auth">Аутентификация (<code>/api/v1/auth/</code>)</h3>
+<h4 id="_8">Регистрация</h4>
+<div class="highlight"><pre><span></span><code>POST /api/v1/auth/register
+</code></pre></div>
+<p><strong>Описание:</strong> Регистрация нового пользователя<br />
+<strong>Статус ответа:</strong> 201 (Created)<br />
+<strong>Тело запроса:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john_doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;securepassword&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;display_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;New York&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;preferences&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Science fiction, Fantasy&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;bio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Book lover since 2010&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Ответ:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john_doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-21T10:30:00&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total_swaps&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;is_active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="_9">Вход в систему</h4>
+<div class="highlight"><pre><span></span><code>POST /api/v1/auth/login
+</code></pre></div>
+<p><strong>Описание:</strong> Вход с получением JWT токена<br />
+<strong>Статус ответа:</strong> 200 (OK)<br />
+<strong>Тело запроса:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john_doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;securepassword&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<p><strong>Ответ:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;access_token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9...&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;token_type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;bearer&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="_10">Получить информацию о текущем пользователе</h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/auth/me
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 200 (OK)<br />
+<strong>Ответ:</strong> UserOut (см. выше)</p>
+<h4 id="_11">Изменить пароль</h4>
+<div class="highlight"><pre><span></span><code>POST /api/v1/auth/change-password
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 204 (No Content)<br />
+<strong>Тело запроса:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;old_password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;oldpassword&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;new_password&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;newpassword&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="apiv1users">Пользователи (<code>/api/v1/users/</code>)</h3>
+<h4 id="_12">Получить список пользователей</h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/users/?skip=0&amp;limit=50&amp;active_only=true
+</code></pre></div>
+<p><strong>Параметры:</strong></p>
+<ul>
+<li><code>skip</code>: пропустить N записей (по умолчанию 0)</li>
+<li><code>limit</code>: вернуть N записей (по умолчанию 50, максимум 200)</li>
+<li><code>active_only</code>: показать только активных пользователей (по умолчанию true)</li>
+</ul>
+<p><strong>Ответ:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john_doe&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;display_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john@example.com&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;New York&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-21T10:30:00&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;bio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Book lover&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;total_swaps&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;is_active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<h4 id="_13">Получить детальную информацию о пользователе</h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/users/{user_id}
+</code></pre></div>
+<p><strong>Ответ:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;username&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john_doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;display_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John Doe&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;email&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;john@example.com&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;New York&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;created_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-21T10:30:00&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;bio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Book lover&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;total_swaps&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;is_active&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;userbooks&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-123&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;book_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-book-1&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;good&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;available&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;added_at&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2024-04-20T15:00:00&quot;</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">&quot;book&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-book-1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dune&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;authors&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Frank Herbert&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Epic science fiction&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;genres&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="err">...</span><span class="p">]</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="_14">Обновить свой профиль</h4>
+<div class="highlight"><pre><span></span><code>PATCH /api/v1/users/me
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 200 (OK)<br />
+<strong>Тело запроса:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;display_name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;John D.&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;location&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Boston&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;preferences&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Science fiction&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;bio&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Updated bio&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="apiv1genres">Жанры (<code>/api/v1/genres/</code>)</h3>
+<h4 id="_15">Получить все жанры</h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/genres/
+</code></pre></div>
+<p><strong>Ответ:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Science Fiction&quot;</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-2&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Fantasy&quot;</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<h4 id="_16">Создать новый жанр</h4>
+<div class="highlight"><pre><span></span><code>POST /api/v1/genres/
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 201 (Created)<br />
+<strong>Тело запроса:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mystery&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h3 id="apiv1books">Книги (<code>/api/v1/books/</code>)</h3>
+<h4 id="_17">Получить все книги</h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/books/?skip=0&amp;limit=50
+</code></pre></div>
+<p><strong>Параметры:</strong></p>
+<ul>
+<li><code>skip</code>: пропустить N записей</li>
+<li><code>limit</code>: вернуть N записей</li>
+</ul>
+<p><strong>Ответ:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">[</span>
+<span class="w">  </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-book-1&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Dune&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;authors&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Frank Herbert&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;ISBN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0-441-13959-0&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;A epic science fiction novel&quot;</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;published_year&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1965</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;page_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">680</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">&quot;genres&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">      </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-1&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Science Fiction&quot;</span>
+<span class="w">      </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="w">  </span><span class="p">}</span>
+<span class="p">]</span>
+</code></pre></div>
+<h4 id="id">Получить книгу по ID</h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/books/{book_id}
+</code></pre></div>
+<h4 id="_18">Создать новую книгу</h4>
+<div class="highlight"><pre><span></span><code>POST /api/v1/books/
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 201 (Created)<br />
+<strong>Тело запроса:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;title&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;The Foundation&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;authors&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Isaac Asimov&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;ISBN&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;0-553-29438-0&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Foundation series&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;published_year&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1951</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;page_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">255</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;genre_ids&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;uuid-1&quot;</span><span class="p">]</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="_19">Обновить книгу</h4>
+<div class="highlight"><pre><span></span><code>PATCH /api/v1/books/{book_id}
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 200 (OK)</p>
+<h4 id="_20">Удалить книгу</h4>
+<div class="highlight"><pre><span></span><code>DELETE /api/v1/books/{book_id}
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 204 (No Content)</p>
+<h3 id="apiv1user-books">Библиотека пользователя (<code>/api/v1/user-books/</code>)</h3>
+<h4 id="_21">Получить все книги пользователя</h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/user-books/?skip=0&amp;limit=50
+</code></pre></div>
+<h4 id="_22">Добавить книгу в библиотеку</h4>
+<div class="highlight"><pre><span></span><code>POST /api/v1/user-books/
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 201 (Created)<br />
+<strong>Тело запроса:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;book_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-book-1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;good&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;available&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="_23">Получить книгу из библиотеки</h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/user-books/{userbook_id}
+</code></pre></div>
+<h4 id="_24">Обновить статус книги</h4>
+<div class="highlight"><pre><span></span><code>PATCH /api/v1/user-books/{userbook_id}
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Тело запроса:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;acceptable&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;unavailable&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="_25">Удалить книгу из библиотеки</h4>
+<div class="highlight"><pre><span></span><code>DELETE /api/v1/user-books/{userbook_id}
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен</p>
+<h3 id="apiv1exchanges">Обмены (<code>/api/v1/exchanges/</code>)</h3>
+<h4 id="_26">Получить все обмены пользователя</h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/exchanges/?skip=0&amp;limit=50&amp;status=pending
+</code></pre></div>
+<p><strong>Параметры:</strong></p>
+<ul>
+<li><code>skip</code>: пропустить N записей</li>
+<li><code>limit</code>: вернуть N записей</li>
+<li><code>status</code>: фильтр по статусу (pending, accepted, rejected, completed, cancelled)</li>
+</ul>
+<h4 id="_27">Создать запрос на обмен</h4>
+<div class="highlight"><pre><span></span><code>POST /api/v1/exchanges/
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 201 (Created)<br />
+<strong>Тело запроса:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;requested_userbook_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-userbook-1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;offered_userbook_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-userbook-2&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;I would love to trade!&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="_28">Получить детали обмена</h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/exchanges/{exchange_id}
+</code></pre></div>
+<h4 id="_29">Принять запрос на обмен</h4>
+<div class="highlight"><pre><span></span><code>PATCH /api/v1/exchanges/{exchange_id}/accept
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 200 (OK)</p>
+<h4 id="_30">Отклонить запрос на обмен</h4>
+<div class="highlight"><pre><span></span><code>PATCH /api/v1/exchanges/{exchange_id}/reject
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 200 (OK)</p>
+<h4 id="_31">Завершить обмен</h4>
+<div class="highlight"><pre><span></span><code>PATCH /api/v1/exchanges/{exchange_id}/complete
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 200 (OK)</p>
+<h3 id="apiv1messages">Сообщения (<code>/api/v1/messages/</code>)</h3>
+<h4 id="_32">Получить сообщения для обмена</h4>
+<div class="highlight"><pre><span></span><code>GET /api/v1/messages/{exchange_id}?skip=0&amp;limit=50
+</code></pre></div>
+<h4 id="_33">Отправить сообщение</h4>
+<div class="highlight"><pre><span></span><code>POST /api/v1/messages/
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 201 (Created)<br />
+<strong>Тело запроса:</strong></p>
+<div class="highlight"><pre><span></span><code><span class="p">{</span>
+<span class="w">  </span><span class="nt">&quot;exchange_id&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;uuid-exchange-1&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">&quot;message_text&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Let&#39;s meet tomorrow at 3 PM&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+<h4 id="_34">Отметить сообщение как прочитанное</h4>
+<div class="highlight"><pre><span></span><code>PATCH /api/v1/messages/{message_id}/mark-read
+</code></pre></div>
+<p><strong>Требуется:</strong> Bearer токен<br />
+<strong>Статус ответа:</strong> 200 (OK)</p>
+<hr />
+<h2 id="_35">Логика предметной области</h2>
+<h3 id="_36">Жизненный цикл обмена книгами</h3>
+<ol>
+<li><strong>Создание запроса</strong> (статус: <code>pending</code>)</li>
+<li>Пользователь A видит книгу пользователя B</li>
+<li>Пользователь A создает запрос на обмен, предлагая свою книгу</li>
+<li>
+<p>Запрос отправляется пользователю B</p>
+</li>
+<li>
+<p><strong>Рассмотрение запроса</strong></p>
+</li>
+<li>Пользователь B может принять (<code>accepted</code>) или отклонить (<code>rejected</code>) запрос</li>
+<li>
+<p>При отклонении — обмен заканчивается</p>
+</li>
+<li>
+<p><strong>Завершение обмена</strong> (статус: <code>completed</code>)</p>
+</li>
+<li>После принятия обе стороны обмениваются книгами</li>
+<li>Обмен отмечается как завершенный</li>
+<li>У обоих пользователей счетчик <code>total_swaps</code> увеличивается на 1</li>
+<li>
+<p>Обе книги переходят в статус <code>swapped</code></p>
+</li>
+<li>
+<p><strong>Отмена</strong> (статус: <code>cancelled</code>)</p>
+</li>
+<li>Обмен может быть отменен на любом этапе</li>
+</ol>
+<h3 id="_37">Состояние книги в библиотеке</h3>
+<ul>
+<li><strong>available</strong> — книга доступна для обмена</li>
+<li><strong>swapped</strong> — книга обменена</li>
+<li><strong>unavailable</strong> — книга временно недоступна</li>
+</ul>
+<h3 id="_38">Условие книги</h3>
+<ul>
+<li><strong>new</strong> — новая, не читавшаяся</li>
+<li><strong>good</strong> — в хорошем состоянии</li>
+<li><strong>acceptable</strong> — приемлемое состояние (есть заломы, пометки)</li>
+<li><strong>poor</strong> — плохое состояние (повреждена, но читаема)</li>
+</ul>
+<hr />
+<h2 id="pydantic">Pydantic схемы (примеры)</h2>
+<h3 id="usercreate">UserCreate</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">UserCreate</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">email</span><span class="p">:</span> <span class="n">EmailStr</span>
+    <span class="n">password</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># минимум 6 символов</span>
+    <span class="n">display_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">preferences</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">bio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+<h3 id="userout">UserOut</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">UserOut</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="nb">id</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">username</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">display_name</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">email</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">location</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">preferences</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">created_at</span><span class="p">:</span> <span class="n">datetime</span>
+    <span class="n">bio</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span>
+    <span class="n">total_swaps</span><span class="p">:</span> <span class="nb">int</span>
+    <span class="n">is_active</span><span class="p">:</span> <span class="nb">bool</span>
+
+    <span class="k">class</span><span class="w"> </span><span class="nc">Config</span><span class="p">:</span>
+        <span class="n">from_attributes</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div>
+<h3 id="bookcreate">BookCreate</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">BookCreate</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">title</span><span class="p">:</span> <span class="nb">str</span>
+    <span class="n">authors</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">ISBN</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">description</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">published_year</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">page_count</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">int</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">genre_ids</span><span class="p">:</span> <span class="n">List</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>  <span class="c1"># UUID жанров</span>
+</code></pre></div>
+<h3 id="userbookcreate">UserBookCreate</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">UserBookCreate</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">book_id</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># UUID</span>
+    <span class="n">condition</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># &quot;new&quot;, &quot;good&quot;, &quot;acceptable&quot;, &quot;poor&quot;</span>
+    <span class="n">status</span><span class="p">:</span> <span class="nb">str</span> <span class="o">=</span> <span class="s2">&quot;available&quot;</span>  <span class="c1"># &quot;available&quot;, &quot;swapped&quot;, &quot;unavailable&quot;</span>
+</code></pre></div>
+<h3 id="exchangecreate">ExchangeCreate</h3>
+<div class="highlight"><pre><span></span><code><span class="k">class</span><span class="w"> </span><span class="nc">ExchangeCreate</span><span class="p">(</span><span class="n">BaseModel</span><span class="p">):</span>
+    <span class="n">requested_userbook_id</span><span class="p">:</span> <span class="nb">str</span>  <span class="c1"># UUID книги, которую запрашиваю</span>
+    <span class="n">offered_userbook_id</span><span class="p">:</span> <span class="nb">str</span>     <span class="c1"># UUID книги, которую предлагаю</span>
+    <span class="n">message</span><span class="p">:</span> <span class="n">Optional</span><span class="p">[</span><span class="nb">str</span><span class="p">]</span> <span class="o">=</span> <span class="kc">None</span>
+</code></pre></div>
+<hr />
+<h2 id="api_1">Примеры использования API</h2>
+<h3 id="_39">Регистрация и вход</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Регистрация</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:8000/api/v1/auth/register&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;username&quot;: &quot;john_doe&quot;,</span>
+<span class="s1">    &quot;email&quot;: &quot;john@example.com&quot;,</span>
+<span class="s1">    &quot;password&quot;: &quot;securepassword&quot;,</span>
+<span class="s1">    &quot;display_name&quot;: &quot;John Doe&quot;</span>
+<span class="s1">  }&#39;</span>
+
+<span class="c1"># 2. Вход в систему</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:8000/api/v1/auth/login&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;username&quot;: &quot;john_doe&quot;,</span>
+<span class="s1">    &quot;password&quot;: &quot;securepassword&quot;</span>
+<span class="s1">  }&#39;</span>
+
+<span class="c1"># Ответ содержит access_token — используйте его в дальнейших запросах</span>
+</code></pre></div>
+<h3 id="_40">Работа с книгами</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Получить все доступные книги</span>
+curl<span class="w"> </span><span class="s2">&quot;http://localhost:8000/api/v1/books/?skip=0&amp;limit=10&quot;</span>
+
+<span class="c1"># 2. Создать новую книгу (требуется авторизация)</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:8000/api/v1/books/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_TOKEN&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;title&quot;: &quot;Dune&quot;,</span>
+<span class="s1">    &quot;authors&quot;: &quot;Frank Herbert&quot;,</span>
+<span class="s1">    &quot;ISBN&quot;: &quot;0-441-13959-0&quot;,</span>
+<span class="s1">    &quot;description&quot;: &quot;Epic science fiction novel&quot;,</span>
+<span class="s1">    &quot;published_year&quot;: 1965,</span>
+<span class="s1">    &quot;page_count&quot;: 680,</span>
+<span class="s1">    &quot;genre_ids&quot;: [&quot;genre-id-1&quot;]</span>
+<span class="s1">  }&#39;</span>
+
+<span class="c1"># 3. Добавить книгу в свою библиотеку</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:8000/api/v1/user-books/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_TOKEN&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;book_id&quot;: &quot;book-id-from-step-2&quot;,</span>
+<span class="s1">    &quot;condition&quot;: &quot;good&quot;,</span>
+<span class="s1">    &quot;status&quot;: &quot;available&quot;</span>
+<span class="s1">  }&#39;</span>
+</code></pre></div>
+<h3 id="_41">Обмен книгами</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># 1. Просмотреть профиль пользователя и его книги</span>
+curl<span class="w"> </span><span class="s2">&quot;http://localhost:8000/api/v1/users/1&quot;</span>
+
+<span class="c1"># 2. Создать запрос на обмен</span>
+curl<span class="w"> </span>-X<span class="w"> </span>POST<span class="w"> </span><span class="s2">&quot;http://localhost:8000/api/v1/exchanges/&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_TOKEN&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Content-Type: application/json&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-d<span class="w"> </span><span class="s1">&#39;{</span>
+<span class="s1">    &quot;requested_userbook_id&quot;: &quot;userbook-id-from-other-user&quot;,</span>
+<span class="s1">    &quot;offered_userbook_id&quot;: &quot;your-userbook-id&quot;,</span>
+<span class="s1">    &quot;message&quot;: &quot;Would you like to trade?&quot;</span>
+<span class="s1">  }&#39;</span>
+
+<span class="c1"># 3. Получить входящие запросы на обмен</span>
+curl<span class="w"> </span><span class="s2">&quot;http://localhost:8000/api/v1/exchanges/?status=pending&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_TOKEN&quot;</span>
+
+<span class="c1"># 4. Принять запрос на обмен</span>
+curl<span class="w"> </span>-X<span class="w"> </span>PATCH<span class="w"> </span><span class="s2">&quot;http://localhost:8000/api/v1/exchanges/exchange-id/accept&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_TOKEN&quot;</span>
+
+<span class="c1"># 5. Завершить обмен</span>
+curl<span class="w"> </span>-X<span class="w"> </span>PATCH<span class="w"> </span><span class="s2">&quot;http://localhost:8000/api/v1/exchanges/exchange-id/complete&quot;</span><span class="w"> </span><span class="se">\</span>
+<span class="w">  </span>-H<span class="w"> </span><span class="s2">&quot;Authorization: Bearer YOUR_TOKEN&quot;</span>
+</code></pre></div>
+<hr />
+<h2 id="_42">Вывод</h2>
+<p>В результате лабораторной работы было реализовано полноценное серверное приложение по теме буккроссинга.</p>
+<p>Проект включает:</p>
+<ul>
+<li><strong>Модель данных</strong> с использованием SQLAlchemy и Pydantic;</li>
+<li><strong>CRUD-операции</strong> для всех основных сущностей;</li>
+<li><strong>Связи</strong> one-to-many и many-to-many с ассоциативными таблицами;</li>
+<li><strong>Систему миграций</strong> базы данных через Alembic;</li>
+<li><strong>Аутентификацию и авторизацию</strong> по JWT;</li>
+<li><strong>Пользовательский интерфейс</strong> для основных сценариев работы.</li>
+</ul>
+<p>Разработанное приложение соответствует тематике лабораторной работы и покрывает основной функционал сервиса для обмена книгами между пользователями.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>
