@@ -8,7 +8,6 @@ from common.models import Book
 
 def save_book(title: str, authors: str | None = None) -> dict:
     """Сохраняет книгу. Если книга с таким заголовком уже есть — не дублирует.
-
     Возвращает словарь с результатом: id книги и флаг created.
     """
     with SessionLocal() as session:

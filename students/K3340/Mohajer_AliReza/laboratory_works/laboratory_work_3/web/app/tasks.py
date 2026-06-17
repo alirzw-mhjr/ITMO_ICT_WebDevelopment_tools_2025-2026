@@ -7,8 +7,6 @@
   (пример регулярной операции по расписанию).
 """
 
-from __future__ import annotations
-
 import logging
 import os
 
@@ -26,9 +24,7 @@ PARSER_URL = os.getenv("PARSER_URL", "http://parser:8001")
 def parse_url_task(self, url: str) -> dict:
     """Фоновая задача: просит сервис-парсер обработать URL и сохранить книгу."""
     try:
-        response = requests.post(
-            f"{PARSER_URL}/parse", json={"url": url}, timeout=60
-        )
+        response = requests.post(f"{PARSER_URL}/parse", json={"url": url}, timeout=60)
         response.raise_for_status()
         return response.json()
     except requests.RequestException as exc:

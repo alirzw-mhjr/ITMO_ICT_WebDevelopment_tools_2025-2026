@@ -33,11 +33,6 @@ def on_startup() -> None:
     init_db()
 
 
-@app.get("/")
-def health() -> dict[str, str]:
-    return {"status": "ok", "service": "web"}
-
-
 @app.get("/api/books", response_model=list[BookOut])
 def list_books(db: Session = Depends(get_db)) -> list[Book]:
     """Список книг из БД (в том числе добавленных парсером)."""

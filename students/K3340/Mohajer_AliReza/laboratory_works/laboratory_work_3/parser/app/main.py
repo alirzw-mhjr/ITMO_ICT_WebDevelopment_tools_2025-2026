@@ -23,11 +23,6 @@ def on_startup() -> None:
     init_db()
 
 
-@app.get("/health")
-def health() -> dict[str, str]:
-    return {"status": "ok", "service": "parser"}
-
-
 @app.post("/parse")
 def parse(body: ParseRequest) -> dict:
     """Загружает страницу по URL, парсит заголовок и сохраняет его в БД."""
